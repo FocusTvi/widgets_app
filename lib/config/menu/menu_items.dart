@@ -39,4 +39,24 @@ const appMenuItems = <MenuItem>[
       subTitle: "Shows animation when tap",
       link: "/animated_container",
       icon: Icons.square_outlined),
+  MenuItem(
+      title: "Ui controls + Tiles",
+      subTitle: "UI Controls in flutter",
+      link: "/ui_controls",
+      icon: Icons.square_outlined),
+  MenuItem(
+      title: "Tutorial",
+      subTitle: "Tutorial screen",
+      link: "/tutorial",
+      icon: Icons.accessibility_new_outlined),
+  MenuItem(
+      title: "Infinite scroll and pull",
+      subTitle: "pull to refresh and infinite scroll",
+      link: "/infinite_scroll",
+      icon: Icons.list_alt_rounded),
+  MenuItem(
+      title: "Change theme",
+      subTitle: "Themes for the app",
+      link: "/theme",
+      icon: Icons.theater_comedy),
 ];
