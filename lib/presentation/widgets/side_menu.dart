@@ -19,7 +19,8 @@ class _SideMenuState extends ConsumerState<SideMenu> {
   @override
   Widget build(BuildContext context) {
     final hasNotch = MediaQuery.of(context).viewPadding.top > 35;
-    final isDarkmode = ref.watch(isDarkmodeProvider);
+    final isDarkmode = ref.watch(themeNofierProvider).isDarkMode;
+    // final isDarkmode = ref.watch(isDarkmodeProvider);
     return NavigationDrawer(
         selectedIndex: navDrawerIndex,
         onDestinationSelected: (value) {
@@ -41,7 +42,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
             thumbIcon: MaterialStatePropertyAll(Icon(isDarkmode ? Icons.dark_mode_outlined : Icons.sunny)),
             value: isDarkmode,
             onChanged: (value) {
-              ref.read(isDarkmodeProvider.notifier).state = value;
+              ref.read(themeNofierProvider.notifier).toggleDarkMode();
             },
           )
         ]);
